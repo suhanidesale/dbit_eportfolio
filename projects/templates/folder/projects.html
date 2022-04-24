@@ -1,0 +1,18 @@
+{% {% extends 'main.html' %}
+{% block content%} 
+
+<P> Hello you are on the {{page}} page</P>
+
+{% if number >10 %}
+<p>Number is greater than 10</p>
+{% elif number == 10 %}
+<p>Number is exactly  10</p>
+{% else %}
+<p>Number is less than 10</p>
+{% end if %}
+
+<hr>
+
+<h1> Projects </h1>
+
+{%endblock content %}
