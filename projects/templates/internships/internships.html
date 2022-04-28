@@ -1,0 +1,30 @@
+{% extends 'main.html' %}
+{% block content %}
+
+
+<h1>Internships</h1>
+<table>
+    <tr>
+        
+        <th>Internship</th>
+        <th></th>
+        <th></th>
+
+    </tr>
+    {% for internship in internships %}
+     <tr>
+        
+        <td>{{internship.title}}</td> 
+        <td>{{internship.created}}</td>
+        <!-- <td><a href="{% url 'update-project' project.id %}">Edit</a></td> 
+        <td><a href="{% url 'delete-project' project.id %}">Delete</a></td>  -->
+        <td><a href="{% url 'internship' internship.id %}">View</a></td> 
+
+
+     </tr>
+    {% endfor %}
+
+</table>
+
+
+{% endblock content %}
