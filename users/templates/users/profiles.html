@@ -8,7 +8,7 @@
         <h2>OF DBIT</h2>
       </div>
 
-      <div class="hero-section__search">
+      <!-- <div class="hero-section__search">
         <form class="form" action="#" method="get">
           <div class="form__field">
             <label for="formInput#search">Search Developers </label>
@@ -22,7 +22,7 @@
           </div>
 
           <input class="btn btn--sub btn--lg" type="submit" value="Search" />
-        </form>
+        </form> -->
       </div>
     </div>
   </section>
@@ -51,7 +51,7 @@
                 {{profile.bio | slice:"150"}} <!--|slice:"150"-->
               </p>
               <div class="dev__skills">
-                  {% for skill in profile.skill_set.all %}
+                  {% for skill in profile.skill_set.all|slice:"" %}
                 <span class="tag tag--pill tag--main">
                   <small>{{skill}}</small>
                 </span>
